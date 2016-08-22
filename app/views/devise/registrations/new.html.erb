@@ -1,0 +1,62 @@
+
+<%= stylesheet_link_tag "sign-in" %>
+<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Oxygen:400,300,700" %>
+
+
+
+<body>
+<%= render 'book/navbar' %>
+
+	<div class="main">
+	<%= image_tag logo_image %>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), defaults: {label: false}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  <div class = "lable">
+
+    
+      	<div class="col_1_of_2 span_1_of_2">
+  	<%= f.input :first_name, :html => { :class => 'text', :id => 'active', :type => 'text' }, placeholder: 'First Name', :onfocus => 'this.value = '';', :onblur => 'if (this.value == "") {this.value = "First Name";}' %>
+  	</div>
+
+  	 	<div class="col_1_of_2 span_1_of_2">
+  	<%= f.input :last_name, :html => { :class => 'text', :id => 'active', :type => 'text' }, placeholder: 'Last Name', :onfocus => 'this.value = '';', :onblur => 'if (this.value == "") {this.value = "Last Name";}' %>
+  	</div>
+
+
+
+
+
+  </div>
+
+
+  	<div class ="lable-2">
+
+     </div>
+
+     <div class="lable-2">
+  		<%= f.input :school_id, required: :true, :html => { :class => 'text', :type => "text" }, placeholder: 'School ID' %>
+  	
+    	<%= f.input :email, required: true, :html =>  {:class =>"text", :type => "text" }, placeholder: 'you@email.com' %>
+     </div>
+
+
+  <div class="lable-2">
+    <div class = "circle_img"><%= f.input :avatar, label: 'Avatar (Optional)', label_html: {class: 'avatar'}, required: false %></div>
+  </div>
+
+
+    <div class = "input"><%= f.input :password, required: true, hint: (" " if @minimum_password_length), placeholder: 'password' %></div>
+    <div class = "input"><%= f.input :password_confirmation, required: true, placeholder: 'password' %></div>
+  </div>
+
+
+    <%= f.button :submit, "Sign up" %>
+<% end %>
+
+		<% render "devise/shared/links" %>
+
+	</div>
+</body>

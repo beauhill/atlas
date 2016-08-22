@@ -1,0 +1,49 @@
+
+
+
+<%= content_for(:title, "Team 1671 Home") %>
+
+<%= stylesheet_link_tag "book", media: 'all', 'data-turbolinks-track' => true %>
+
+
+<%=  javascript_include_tag 'slyframe' %>
+
+<%= render 'navbar', :locals => { :info => @info } %>
+
+<div class="wrap">
+
+
+		<div class="usergui">
+	<%= render partial: 'users/user',locals: { user: User.first } %>
+	   </div>
+
+			<center> <h2>  Select </h2> </center>
+
+			<div class="	">
+				<div class="handle" style="transform: translateZ(0px) translateX(0px); width: 190px;">
+					<div class="mousearea"></div>
+				</div>
+			</div>
+
+			<div class="frame" id="forceCentered" style="overflow: hidden;">
+				<ul class="clearfix" style="transform: translateZ(0px) translateX(457px); width: 6840px;">
+				<% @users.each do |user| %>
+				<li> <%= link_to user.first_name, fetch_user_path(:uid => user.school_id), remote: true %> </li>
+
+						<% if user.avatar? %>
+
+
+ 						<li class="active" id="" <%= image_tag @user.field_name.url, :size => "100x100" %></li>
+						<% end %>
+
+					<%= content_tag(:li, "#{user.first_name} #{user.last_name}", :id => user.school_id, :class => "data", 'data-remote': true, :href => fetch_user_path(:uid => user.school_id) ) %>					
+				<% end %>
+					
+				</ul>
+			</div>
+
+			<div class="controls center">
+				<button class="btn prev disabled" disabled=""><i class="icon-chevron-left"></i> prev</button>
+				<button class="btn next">next <i class="icon-chevron-right"></i></button>
+			</div>
+		</div>

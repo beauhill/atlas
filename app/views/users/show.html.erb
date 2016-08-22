@@ -1,0 +1,23 @@
+
+<%= render 'book/navbar' %>
+<%= stylesheet_link_tag "book", media: 'all', 'data-turbolinks-track' => true %>
+
+
+
+<div style="width:45%; margin: auto; border: 6px #2c3e50 double; " class="centromere">
+<%= simple_form_for @user do |f| %>
+
+  <%= f.input :email, placeholder: 'Enter email', label_html: { :style => "margin: 10px;" } %>
+
+  <%= f.input :password, placeholder: 'Password' %>
+
+  <%= f.input :avatar %>
+
+
+
+  <%= f.input :sex, as: :radio_buttons,
+    collection: ['Male', 'Female'] %>
+
+  <%= f.button :submit %>
+<% end %>
+</div>
