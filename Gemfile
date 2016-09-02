@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+
+gem "font-awesome-rails"
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw] #This exists for cross platform use ( Windows complained )
 gem 'paperclip', '~> 4.2' #at the writing of this post  
 gem 'devise'
 gem 'simple_form'

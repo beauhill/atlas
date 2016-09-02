@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 	root 'book#index'
 
   get "/fetch_user" => "book#user_next", as: 'fetch_user'
+  get "/usr_demo" => "book#test", as: 'usr'
 
 
   # You can have the root of your site routed with "root"

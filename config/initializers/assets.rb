@@ -9,7 +9,12 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( menu.js )
+Rails.application.config.assets.precompile += %w( TweenMax.min.js )
 Rails.application.config.assets.precompile += %w( book.css )
 Rails.application.config.assets.precompile += %w( slyframe.js )
 Rails.application.config.assets.precompile += %w( sign-in.css )
 Rails.application.config.assets.precompile += %w( profile.css )
+Rails.application.config.assets.precompile += %w( profile.js )
+Rails.application.config.assets.precompile += %w( signin.js )
+

@@ -1,9 +1,16 @@
 class BookController < ApplicationController
 
 	respond_to :html,:js
-	
+
+
+	def test
+		@User = User.first
+	end
+
+
 	def index
 		@users = User.all
+
 	end
 
 	def user_next

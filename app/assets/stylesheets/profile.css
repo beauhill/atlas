@@ -1,4 +1,33 @@
 
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #354458;  /*Sets the text hover color on navbar*/
+font-weight: bold;
+font-size: 17px;
+}
+
+.navbar-default .navbar-nav > li > a {
+font-size: 14px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: white; /*BACKGROUND color for active*/
+background-color: #333333;
+padding: 25px;
+border-top: 6px #333 solid;
+}
+
+  .navbar-default {
+    background-color: #2C3E50;
+    border-color: #333;
+}
+
+a.navbar-brand {
+	font-weight: bold;
+}
+
 / @group resets and elements /
 * { margin: 0; padding: 0; }
 
@@ -44,12 +73,25 @@ ul#n li.sel { background: #b4e127; border: 3px solid #c1ff00; border-top: 0px; b
 ul#n li.sel a { color: #fff; text-shadow: 0px 1px 2px #88b618; }
 
 / @group left /
-#userStats { display: block; width: auto; background-color: #f9f9f9; border: 1px solid #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 12px; }
+#userStats { 
+	display: block; 
+	width: auto; 
+	background-color: #f9f9f9; 
+	border: 1px solid #ccc; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+	padding: 12px; 
+	margin: auto;
+
+}
 
 #userStats .pic { float: left; display: block; margin-right: 10px; }
 #userStats .pic a img { padding: 7px; background: #fff; border: 1px solid #ccc; }
 
-#userStats .data { float: left; display: block; position:  relative; width: 350px; height: 180px; padding: 4px; padding-left: 15px; background: #e6e6e6; overflow:  hidden; box-sizing: border-box; -moz-box-sizing: border-box; }
+#userStats .data { 
+
+	float: right; display: block; position: relative; width: 100%; height: 180px; padding: 4px; padding-left: 15px; background: #e6e6e6; overflow:  hidden; box-sizing: border-box; -moz-box-sizing: border-box; }
 #userStats .data h1 { color: #474747; line-height: 1.6em; text-shadow: 0px 1px 1px #fff; }
 #userStats .data h3 { color: #666; line-height: 0.9em; margin-bottom: 5px; }
 #userStats .data h4 { font-size: 1.2em; line-height: 1.3em; }

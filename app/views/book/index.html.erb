@@ -8,13 +8,20 @@
 
 <%=  javascript_include_tag 'slyframe' %>
 
+
+<%=  javascript_include_tag 'TweenMax.min' %>
+
+
+<%=  javascript_include_tag 'menu.js' %>
+
+
 <%= render 'navbar', :locals => { :info => @info } %>
 
 <div class="wrap">
 
 
 		<div class="usergui">
-	<%= render partial: 'users/user',locals: { user: User.first } %>
+	<%= render partial: 'users/usr',locals: { user: User.first } %>
 	   </div>
 
 			<center> <h2>  Select </h2> </center>
@@ -28,15 +35,14 @@
 			<div class="frame" id="forceCentered" style="overflow: hidden;">
 				<ul class="clearfix" style="transform: translateZ(0px) translateX(457px); width: 6840px;">
 				<% @users.each do |user| %>
-				<li> <%= link_to user.first_name, fetch_user_path(:uid => user.school_id), remote: true %> </li>
 
 						<% if user.avatar? %>
-
-
- 						<li class="active" id="" <%= image_tag @user.field_name.url, :size => "100x100" %></li>
+ 						<li class="active" id="" 
+ 						<li> <%= link_to image_tag (@user.field_name.url), fetch_user_path(:uid => user.school_id), remote: true %> </li>
+ 						<% else %>
+ 					    <li> <%= link_to user.first_name, fetch_user_path(:uid => user.school_id), remote: true %> </li>
 						<% end %>
-
-					<%= content_tag(:li, "#{user.first_name} #{user.last_name}", :id => user.school_id, :class => "data", 'data-remote': true, :href => fetch_user_path(:uid => user.school_id) ) %>					
+										
 				<% end %>
 					
 				</ul>

@@ -1,0 +1,75 @@
+
+	<section class="container"> <!-- container--> 
+		<div class="user-profile  "> <!-- user profile-->
+			<div class="upper-contents" style="background-image: url('<%= calculate_image(user) %>') "><!-- upper contents-->
+
+				<div class="profile-image-container">
+					      <% if user.avatar? %>
+					<img src="<%= user.avatar.url %>" class="profile-image"> 
+					      <% else %>
+					<img src="http://www.team1671.com/wp-content/uploads/2013/05/Childrens-Book-Birds-1024x396.png" class="profile-image"> 
+					      <%end%>
+
+				</div>
+				<span class="profile-name"><%= user.first_name + " "+ user.last_name %></span>
+				<span class="profile-work"><%= user.title %></span>
+			</div><!-- /upper contents-->
+			<div class="latest">SEE MY LATEST WORK HERE</div>
+			<div class="menu"><!-- menu toggle-->  
+				<div class="menu-wrapper">
+					<ul id="menu-items">
+						<li class="menu-item">
+							<a href="#" class="menu-item-button fb">
+								<i class="menu-item-icon fa fa-facebook"></i>
+							</a>
+							<div class="menu-item-bounce" data-li="fb"></div>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-button twitter">
+								<i class="menu-item-icon fa fa-twitter"></i>
+							</a>
+							<div class="menu-item-bounce" data-li="twitter"></div>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-item-button linkedin">
+								<i class="menu-item-icon fa fa-linkedin"></i>
+							</a>
+							<div class="menu-item-bounce" data-li="linkedin"></div>
+						</li>
+						<li class="menu-item">
+							<a  href="#" class="menu-item-button be">
+								<i class="menu-item-icon fa fa-behance"></i>
+							</a>
+							<div class="menu-item-bounce" data-li="be"></div>
+						</li>							
+					</ul>
+					<button id="menu-toggle-button">
+						<i class="fa fa-plus menu-toggle-icon"></i>
+					</button>
+				</div>
+			</div><!-- /menu toggle-->
+			<div class="bottom-contents"><!-- bottom contents-->
+				<div class="inner-contents">
+					<a href="#" class="hireme"><i class="fa fa-envelope"></i> Hire Me</a>
+					<a href="#" class="follow"><i class="fa fa-plus-circle"></i> Follow</a> 
+				</div >
+				<div class="lower-contents">
+					<span class="left-content" style="float:left">myemmail@gmail.com</span>
+					<span class="right-content" style="float:right">+06-3433-9259</span> 
+				</div>
+			</div><!-- /bottom contents-->
+			<div class="bottom-widget"> <!-- bottom widget-->
+				<div class="first-widget"> 
+					<span>57</span>
+					PROJECTS
+				</div>
+				<div class="second-widget"> 
+					<span>725</span>
+					FOLLOWERS
+				</div>
+				<div class="third-widget"> 
+					<span>251</span>
+					LIKES
+				</div>
+			</div> <!-- /bottom widget-->
+		</div>   <!-- /user profile-->
