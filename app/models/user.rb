@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   end
 
 
-  has_attached_file :avatar, styles: { :medium => "640x" }
+  has_attached_file :avatar, :styles => {:thumb => "125x125!", :medium => "640x" }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   validates_with AttachmentSizeValidator, attributes: :avatar, less_than: 1.megabytes
 

@@ -17,4 +17,4 @@ Rails.application.config.assets.precompile += %w( sign-in.css )
 Rails.application.config.assets.precompile += %w( profile.css )
 Rails.application.config.assets.precompile += %w( profile.js )
 Rails.application.config.assets.precompile += %w( signin.js )
-
+Rails.application.config.assets.precompile += %w( font-awesome.min.css )

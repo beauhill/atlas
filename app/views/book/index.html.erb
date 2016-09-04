@@ -10,8 +10,7 @@
 
 
 <%=  javascript_include_tag 'TweenMax.min' %>
-
-
+<%=  stylesheet_link_tag 'font-awesome.min.css' %>
 <%=  javascript_include_tag 'menu.js' %>
 
 
@@ -20,11 +19,13 @@
 <div class="wrap">
 
 
+
+		
+
 		<div class="usergui">
 	<%= render partial: 'users/usr',locals: { user: User.first } %>
 	   </div>
 
-			<center> <h2>  Select </h2> </center>
 
 			<div class="	">
 				<div class="handle" style="transform: translateZ(0px) translateX(0px); width: 190px;">
@@ -32,15 +33,16 @@
 				</div>
 			</div>
 
-			<div class="frame" id="forceCentered" style="overflow: hidden;">
+				<div class="frame" id="forceCentered" style="overflow: hidden;">
 				<ul class="clearfix" style="transform: translateZ(0px) translateX(457px); width: 6840px;">
 				<% @users.each do |user| %>
 
-						<% if user.avatar? %>
+						<% if false %>
  						<li class="active" id="" 
  						<li> <%= link_to image_tag (@user.field_name.url), fetch_user_path(:uid => user.school_id), remote: true %> </li>
  						<% else %>
- 					    <li> <%= link_to user.first_name, fetch_user_path(:uid => user.school_id), remote: true %> </li>
+ 						<li class="profile-image"> <%= link_to user.first_name, fetch_user_path(:uid => user.school_id), remote: true %> </li>
+ 					   
 						<% end %>
 										
 				<% end %>
@@ -48,8 +50,10 @@
 				</ul>
 			</div>
 
+
+
 			<div class="controls center">
-				<button class="btn prev disabled" disabled=""><i class="icon-chevron-left"></i> prev</button>
-				<button class="btn next">next <i class="icon-chevron-right"></i></button>
+				<button class="btn prev disabled" disabled=""><i class="icon-chevron-left"></i> Previous</button>
+				<button class="btn next">Next <i class="icon-chevron-right"></i></button>
 			</div>
 		</div>

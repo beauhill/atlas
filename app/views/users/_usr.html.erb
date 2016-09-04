@@ -1,6 +1,6 @@
 
 	<section class="container"> <!-- container--> 
-		<div class="user-profile  "> <!-- user profile-->
+		<div class="user-profile-top"> <!-- user profile-->
 			<div class="upper-contents" style="background-image: url('<%= calculate_image(user) %>') "><!-- upper contents-->
 
 				<div class="profile-image-container">
@@ -13,9 +13,64 @@
 				</div>
 				<span class="profile-name"><%= user.first_name + " "+ user.last_name %></span>
 				<span class="profile-work"><%= user.title %></span>
+
+
 			</div><!-- /upper contents-->
-			<div class="latest">SEE MY LATEST WORK HERE</div>
-			<div class="menu"><!-- menu toggle-->  
+			<div class="latest"></div>
+
+
+
+			</div>   <!-- /user profile top-->
+
+
+
+
+
+			<div class="user-profile-top" style="padding-top: 30px;margin-right: 15%;;margin-left: 15%;"> <!-- user profile-->
+
+
+				<div class="bottom-widget"> <!-- bottom widget-->
+				<div class="first-widget"> 
+					<span>57</span>
+					PROJECTS
+				</div>
+				<div class="second-widget"> 
+					<span>725</span>
+					FOLLOWERS
+				</div>
+				<div class="third-widget"> 
+					<span>251</span>
+					LIKES
+				</div>
+			</div> <!-- /bottom widget-->
+
+
+
+			</div>
+
+
+			<div class="user-profile-bottom">
+
+				 
+
+			
+
+			<div class="bottom-contents"><!-- bottom contents-->
+
+
+
+			<div class="panel panel-default one-third">
+  <div class="panel-heading" id="panelTitle">
+    <h2 style="text-align:center;color:white;"class="panel-title">About Me:</h2>
+  </div>
+  <div class="panelText">
+    Panel content
+  </div>
+</div>
+
+			 <div class="menu "><!-- menu toggle-->  
+			 			
+
 				<div class="menu-wrapper">
 					<ul id="menu-items">
 						<li class="menu-item">
@@ -44,32 +99,44 @@
 						</li>							
 					</ul>
 					<button id="menu-toggle-button">
-						<i class="fa fa-plus menu-toggle-icon"></i>
+						<span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span>
 					</button>
 				</div>
-			</div><!-- /menu toggle-->
-			<div class="bottom-contents"><!-- bottom contents-->
+			</div><!-- /menu toggle--> 
+
+	
+
+			<div class="two-third">
+					<div id="panelTitle" class="panel-heading" alt>
+    <h2  style="text-align:center;font-size: 18px;"class="panel-title"> Projects </h2>
+       </div>
+
+       <div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading"> Project </h4>
+    <p class="list-group-item-text">yes</p>
+  </a>
+</div>
+ 
+
+			</div>
+
+
 				<div class="inner-contents">
-					<a href="#" class="hireme"><i class="fa fa-envelope"></i> Hire Me</a>
-					<a href="#" class="follow"><i class="fa fa-plus-circle"></i> Follow</a> 
+
+
+
+
+
+
+				<!--	<a href="#" class="hireme"><i class="fa fa-envelope"></i> Hire Me</a>
+					<a href="#" class="follow"><i class="fa fa-plus-circle"></i> Follow</a> -->
+
 				</div >
 				<div class="lower-contents">
-					<span class="left-content" style="float:left">myemmail@gmail.com</span>
-					<span class="right-content" style="float:right">+06-3433-9259</span> 
+				
+
 				</div>
 			</div><!-- /bottom contents-->
-			<div class="bottom-widget"> <!-- bottom widget-->
-				<div class="first-widget"> 
-					<span>57</span>
-					PROJECTS
-				</div>
-				<div class="second-widget"> 
-					<span>725</span>
-					FOLLOWERS
-				</div>
-				<div class="third-widget"> 
-					<span>251</span>
-					LIKES
-				</div>
-			</div> <!-- /bottom widget-->
-		</div>   <!-- /user profile-->
+		
+			</div> <!-- /user profile bottom -->

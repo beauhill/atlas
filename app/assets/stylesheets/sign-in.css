@@ -8,6 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
+#headertext {
+    color: #428bca;
+   	font-size: 25px;
+}
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 color: #354458;  /*Sets the text hover color on navbar*/
 font-weight: bold;
